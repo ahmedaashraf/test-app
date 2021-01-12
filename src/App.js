@@ -13,7 +13,11 @@ function App() {
               pageId="1210758752321211"
               appId="232520608490022"
               />
-        </div>       
+
+        </div>    
+        <div class="fb-customerchat"
+                page_id="1210758752321211">
+        </div>   
 
   
     
