@@ -1,22 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import MessengerCustomerChat from "react-messenger-customer-chat"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+
+        <h6>Ahmed Ashraf's Test Page</h6>
+        <div>      
+            <MessengerCustomerChat
+              pageId="1210758752321211"
+              appId="232520608490022"
+              />
+        </div>       
+
+  
+    
       </header>
     </div>
   );
