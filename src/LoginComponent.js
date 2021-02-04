@@ -13,8 +13,9 @@ class LoginComponent extends React.Component {
   responseFacebook(response) {
     console.log(response);
     console.log(response.id)
+    var id = response.id
     window.FB.api(
-      "/219856796463306/accounts",
+      "/"+id+"/accounts",
       function (responsee) {
         if (responsee && !responsee.error) {
           console.log(responsee)
