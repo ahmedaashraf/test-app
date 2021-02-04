@@ -12,6 +12,14 @@ class LoginComponent extends React.Component {
 
   responseFacebook(response) {
     console.log(response);
+    window.FB.api(
+      "/219856796463306/accounts",
+      function (responsee) {
+        if (responsee && !responsee.error) {
+          console.log(responsee)
+        }
+      }
+  );
   }
 
   loadFbLoginApi() {
@@ -75,28 +83,27 @@ class LoginComponent extends React.Component {
     render() {
         return (
           
-                <div>
-                  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=325286625361086&autoLogAppEvents=1" nonce="I6hRhN5L"></script> 
+                // <div>
+                //   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=325286625361086&autoLogAppEvents=1" nonce="I6hRhN5L"></script> 
 
-                 <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                    <button
-                        classNames = "btn-facebook"
-                        id         = "btn-social-login"
-                        onClick = {this.handleFBLogin}
-                        >
-                            <span className="fa fa-facebook"></span> Sign in with Facebook
-                    </button>
-                      {/* <FacebookLogin
+                //  <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                //     <button
+                //         classNames = "btn-facebook"
+                //         id         = "btn-social-login"
+                //         onClick = {this.handleFBLogin}
+                //         >
+                //             <span className="fa fa-facebook"></span> Sign in with Facebook
+                //     </button>
+                      <FacebookLogin
                         appId="1088597931155576"
                         autoLoad={true}
                         fields="name,email,picture"
                         scope="public_profile,pages_show_list,pages_messaging,pages_manage_metadata"
                         callback={this.responseFacebook}
-                      /> */}
+                      />
 
                       
 
-                </div>
                );
     }
 }
